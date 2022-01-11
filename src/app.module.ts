@@ -7,6 +7,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ApiConfigService } from './shared/services/api-config.service';
 import { SharedModule } from './shared/shared.module';
+import { AuthModule } from './modules/auth/auth.module';
+import { UserModule } from './modules/user/user.module';
 
 @Module({
   imports: [
@@ -24,6 +26,10 @@ import { SharedModule } from './shared/shared.module';
         configService.typeOrmConfig,
       inject: [ApiConfigService],
     }),
+
+    AuthModule,
+
+    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],
