@@ -23,6 +23,14 @@ yarn start:dev
 
 ```
 
+# Starting Docker container
+
+```bash
+# Run below command inside nestjs-template folder in terminal
+docker-compose up
+
+```
+
 ## Test
 
 ```bash
@@ -35,6 +43,10 @@ $ yarn test:e2e
 # test coverage
 $ yarn test:cov
 ```
+
+# Swagger documentation
+
+open http://localhost:3000/documentation
 
 # Envioroment variables example
 
