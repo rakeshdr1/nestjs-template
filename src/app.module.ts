@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { SentryModule } from '@ntegral/nestjs-sentry';
 import { LogLevel } from '@sentry/types';
+import { ThrottlerModule } from '@nestjs/throttler';
 
 import { ConfigService } from './shared/services/config.service';
 import { SharedModule } from './shared/shared.module';
@@ -10,6 +11,10 @@ import { UserModule } from './modules/user/user.module';
 
 @Module({
   imports: [
+    ThrottlerModule.forRoot({
+      ttl: 60,
+      limit: 10,
+    }),
     SentryModule.forRootAsync({
       imports: [SharedModule],
       useFactory: async (configService: ConfigService) => ({
