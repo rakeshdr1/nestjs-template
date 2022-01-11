@@ -5,7 +5,7 @@ import * as dotenv from 'dotenv';
 import { SnakeNamingStrategy } from 'src/snake-naming.strategy';
 
 @Injectable()
-export class ApiConfigService {
+export class ConfigService {
   constructor() {
     const nodeEnv = this.nodeEnv;
     dotenv.config({

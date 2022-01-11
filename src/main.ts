@@ -4,7 +4,7 @@ import { ClassSerializerInterceptor, ValidationPipe } from '@nestjs/common';
 
 import { AppModule } from './app.module';
 import { setupSwagger } from './setup-swagger';
-import { ApiConfigService } from './shared/services/api-config.service';
+import { ConfigService } from './shared/services/config.service';
 import { SharedModule } from './shared/shared.module';
 import { HttpExceptionFilter } from './filters/bad-request.filter';
 import { QueryFailedFilter } from './filters/query-failed.filter';
@@ -35,7 +35,7 @@ async function bootstrap() {
     }),
   );
 
-  const configService = app.select(SharedModule).get(ApiConfigService);
+  const configService = app.select(SharedModule).get(ConfigService);
 
   if (['development', 'staging'].includes(configService.nodeEnv)) {
     setupSwagger(app);
