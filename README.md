@@ -6,37 +6,53 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript TypeORM starter repository.
 
-## Installation
+## Getting started
 
 ```bash
-$ npm install
-```
+# 1. Clone the repository.
+git clone https://github.com/rakeshdr1/nestjs-template
 
-## Running the app
+# 2. Enter your newly-cloned folder.
+cd nestjs-template
 
-```bash
-# development
-$ npm run start
+# 3. Install dependencies. (Make sure yarn is installed: https://yarnpkg.com/lang/en/docs/install)
+yarn
 
-# watch mode
-$ npm run start:dev
+# 4. Run development server and open http://localhost:3000
+yarn start:dev
 
-# production mode
-$ npm run start:prod
 ```
 
 ## Test
 
 ```bash
 # unit tests
-$ npm run test
+$ yarn test
 
 # e2e tests
-$ npm run test:e2e
+$ yarn test:e2e
 
 # test coverage
-$ npm run test:cov
+$ yarn test:cov
 ```
+
+# Envioroment variables example
+
+PORT=3000
+JWT_SECRET_KEY=rxPhglGJWPlOW596
+JWT_EXPIRATION_TIME=3600
+
+# Postgres envioroment variables
+
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+POSTGRES_USERNAME=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_DATABASE=demo
+
+# Sentry
+
+SENTRY_DSN='sentry-dsn'
 
 ## Features
 
