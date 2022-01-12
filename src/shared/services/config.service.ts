@@ -33,10 +33,7 @@ export class ConfigService {
   }
 
   get typeOrmConfig(): TypeOrmModuleOptions {
-    let entities = [
-      __dirname + '/../../modules/**/*.entity{.ts,.js}',
-      // AdminUser,
-    ];
+    let entities = [__dirname + '/../../modules/**/*.entity{.ts,.js}'];
     let migrations = [__dirname + '/../../migrations/*{.ts,.js}'];
 
     if ((module as any).hot) {
