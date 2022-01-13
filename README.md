@@ -50,21 +50,30 @@ open http://localhost:3000/documentation
 
 # Envioroment variables example
 
+```
+
 PORT=3000
 JWT_SECRET_KEY=rxPhglGJWPlOW596
 JWT_EXPIRATION_TIME=3600
+```
 
 # Postgres envioroment variables
+
+```
 
 POSTGRES_HOST=localhost
 POSTGRES_PORT=5432
 POSTGRES_USERNAME=postgres
 POSTGRES_PASSWORD=postgres
 POSTGRES_DATABASE=demo
+```
 
 # Sentry
 
+```
+
 SENTRY_DSN='sentry-dsn'
+```
 
 ## Features
 
